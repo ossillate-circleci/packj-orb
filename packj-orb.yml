@@ -1,5 +1,10 @@
 version: 2.1
 
+description: |
+  Block SolarWinds-like supply chain attacks by auditing your PRs/releases for malicious, typo-squatting, abdandoned, vulnerable, and other "risky" open-source dependencies (NPM, PyPI, +more) using Packj.
+display:
+  source_url: https://github.com/ossillate-circleci/packj-orb
+
 jobs:
   packj-audit:
     docker:
