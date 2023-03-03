@@ -1,7 +1,7 @@
 version: 2.1
 orbs:
   packj-orb: ossillate/packj-orb@dev:<<pipeline.git.revision>>
-  orb-tools: circleci/orb-tools@11.5
+  orb-tools: circleci/orb-tools@11.6.1
 
 filters: &filters
   tags:
@@ -16,7 +16,7 @@ jobs:
     steps:
       - checkout
       # Run your orb's commands to validate them.
-      - packj-orb/greet
+      - packj-orb/audit
 workflows:
   test-deploy:
     jobs:
@@ -38,5 +38,4 @@ workflows:
               ignore: /.*/
             tags:
               only: /^v[0-9]+\.[0-9]+\.[0-9]+$/
-
 # VS Code Extension Version: 1.4.0
